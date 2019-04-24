@@ -1,0 +1,1 @@
+<model_info><model_components><categories><category name="Signal Processing"><categories><category name="Sources"><components><component name="Input" type="SCADA Input" /></components></category><category name="Sinks"><components><component name="Probe1" type="Probe" /></components></category></categories></category></categories></model_components></model_info>

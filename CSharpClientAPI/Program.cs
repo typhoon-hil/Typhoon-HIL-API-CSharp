@@ -16,7 +16,7 @@ namespace Examples
                 "load",
                 new Dictionary<string, object>
                     {
-                        { "filename", "C:\\Users\\victor.maryama\\Downloads\\repos\\FroniusDebug2\\FroniusDebug2\\model.tse" },
+                        { "filename", "C:\\Users\\victor.maryama\\Desktop\\CSharpClientAPI\\CSharpClientAPI\\model.tse" },
                     }
             );
 
@@ -31,7 +31,7 @@ namespace Examples
                 "load_model",
                 new Dictionary<string, object>
                     {
-                        { "file", "C:\\Users\\victor.maryama\\Downloads\\repos\\FroniusDebug2\\FroniusDebug2\\model Target files\\model.cpd" },
+                        { "file", "C:\\Users\\victor.maryama\\Desktop\\CSharpClientAPI\\CSharpClientAPI\\model Target files\\model.cpd" },
                         { "vhil_device", true },
                     }
             );
@@ -47,7 +47,7 @@ namespace Examples
                 "set_scada_input_value",
                 new Dictionary<string, object>
                     {
-                        { "scadaInputName", "Inputa" },
+                        { "scadaInputName", "Input" },
                         { "value", 10 },
                     }
             );
@@ -61,6 +61,18 @@ namespace Examples
             );
 
             Console.WriteLine("Read value is: {0}", value);
+
+            // This will fail with a warning
+            // Warnings will just be printed
+            hilApi.Call(
+                "set_pv_amb_params",
+                new Dictionary<string, object>
+                {
+                    { "name", "MYPV" },
+                    { "illumination", 100 },
+                    { "temperature", 20 },
+                }
+            );
 
             hilApi.Call(
                 "stop_simulation",
