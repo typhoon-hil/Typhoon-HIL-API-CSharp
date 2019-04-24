@@ -27,14 +27,14 @@ namespace Examples
                 }
             );
 
-            //hilApi.Call(
-            //    "load_model",
-            //    new Dictionary<string, object>
-            //        {
-            //            { "file", "C:\\Users\\victor.maryama\\Downloads\\repos\\FroniusDebug2\\FroniusDebug2\\model Target files\\model.cpd" },
-            //            { "vhil_device", true },
-            //        }
-            //);
+            hilApi.Call(
+                "load_model",
+                new Dictionary<string, object>
+                    {
+                        { "file", "C:\\Users\\victor.maryama\\Downloads\\repos\\FroniusDebug2\\FroniusDebug2\\model Target files\\model.cpd" },
+                        { "vhil_device", true },
+                    }
+            );
 
             hilApi.Call(
                 "start_simulation",
